@@ -33,7 +33,7 @@ const login = async (req, res) => {
     password: undefined,
     token,
   });
-  res.cookies("token", token, {
+  res.cookie("token", token, {
     httpOnly: true, //only server can manipulate the token
   });
 };

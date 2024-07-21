@@ -7,7 +7,7 @@ const authMiddleware = async (req, res, next) => {
   if (!token) {
     return res
       .status(400)
-      .json({ message: "you are not loggedin".replace, success: false });
+      .json({ message: "you are not loggedin", success: false });
   }
   try {
     const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
